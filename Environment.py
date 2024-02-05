@@ -1,5 +1,5 @@
 import time
-import flappy_bird_gym
+import flappy_bird_gymnasium as flappy_bird_gym
 from Models.DQN import DQNWrapper
 from torchvision import transforms
 from tqdm import tqdm

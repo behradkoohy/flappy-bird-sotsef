@@ -25,7 +25,8 @@ class Logger():
             """, (epoch, reward, t_steps)
         )
         if epoch % 1000 == 0:
-            pickle.dump(model, "_".join([epoch, reward, t_steps]))
+            model.save("_".join([str(epoch), str(reward), str(t_steps)]) + ".model")
+            self.commit()
 
     def commit(self):
         self.conn.commit()
